@@ -24,6 +24,9 @@ namespace MethodsPractice
             //TODO - Place method calls here
 
             PrintSignature();
+            RectangleArea();
+            AddNumbers();
+            CircleArea();
 
         }
 
@@ -41,7 +44,11 @@ namespace MethodsPractice
 
         public void RectangleArea()
         {
+            int length = 7;
+            int width = 5;
+            int area = length * width;
 
+            q2Output.Text = $"The area of a {width} by {length} rectangle is {area} units squared";
         }
 
         // 3. Create a method to get numbers from q3Num1Input and q3Num2Input,
@@ -49,7 +56,14 @@ namespace MethodsPractice
         //
         //    5 + 4 = 9 
 
+        public void AddNumbers()
+        {
+            int num1 = Convert.ToInt32(q2Num1Input.Text);
+            int num2 = Convert.ToInt32(q2Num2Input.Text);
+            int total = num1 + num2;
 
+            q3Output.Text = $"{num1} + {num2} = {total}";
+        }
         
 
         // 4. Create a method to calculate the area of a circle based on  
@@ -57,6 +71,15 @@ namespace MethodsPractice
         //
         //    The area of a circle with radius of 4 is 50.24 units squared
 
+        public void CircleArea()
+        {
+            int radius = Convert.ToInt32(radiusInput.Text);
+            double pi = 3.14;
+            double Total = pi * radius * radius;
+            //area = Math.PI * Math.Pow(radius, 2);
+
+            q4Output.Text = $"A circle with the radius of {radius} has area of {Total} units squared";
+        }
 
 
         // 5. 3U Only - Create a method that will determine and display   
